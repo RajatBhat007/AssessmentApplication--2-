@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+}
+
+<html>
+<head>
+    <title> My first increment </title>
+</head>
+<body>
+
+    <input type="text" name="TextBox" id="TextBox" value="0" />
+    <input type="Button" id='AddButton' value="+" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        @*<script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>*@
+    @section scripts{
+        <script>
+                $(document).ready(function () {
+                $('#AddButton').click(function () {
+                    var counter = $('#TextBox').val();
+                    counter++;
+                    $('#TextBox').val(counter);
+                });
+                });
+        </script>
+    }
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Assessment.Model.tbl_assessment_top_rankerModel>
+@{
+    ViewBag.Title = "Index";
+    Layout ="~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="scrollbar">
+        <table class="leadertable" style="width: 100%; font-size: 24px; font-weight: 700; height: 50vh; background-color: rgb(255 255 255 / 0.53); border-radius: 16px;">
+            <thead>
+                <tr>
+                    <td class="text-center"><button style="width: 100%; height: 100%; border-radius: 10px; background-color: rgb(204 246 209 / 0.91); border: 0.2px solid rgb(255,255,255,0.74); font-weight: bold; font-size: large;">Rank</button></td>
+                    <td class="text-center"><button style="width: 100%; height: 100%; border-radius: 10px; background-color: rgb(204 246 209 / 0.91); border: 0.2px solid rgb(255,255,255,0.74); font-weight: bold; font-size: large;">Name</button></td>
+                    <td class="text-center"><button style="width: 100%; height: 100%; border-radius: 10px; background-color: rgb(204 246 209 / 0.91); border: 0.2px solid rgb(255,255,255,0.74); font-weight: bold; font-size: large;">Points</button></td>
+                    <td class="text-center"><button style="width: 100%; height: 100%; border-radius: 10px; background-color: rgb(204 246 209 / 0.91); border: 0.2px solid rgb(255,255,255,0.74); font-weight: bold; padding-left:7px;font-size:large;">Performance</button></td>
+                    <td class="text-center"><button style="width: 100%; height: 100%; border-radius: 10px; background-color: rgb(204 246 209 / 0.91); border: 0.2px solid rgb(255,255,255,0.74); font-weight: bold; font-size: large;">Last Since</button></td>
+
+                </tr>
+            </thead>
+            <tbody class="text-center" style="width: 100%; font-size: 20px; font-weight: 700;">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Rank</td>
+                        <td style="text-align: left;">@item.name</td>
+                        <td>@item.score</td>
+                        <td>
+                            @if (item.Performance == 1)
+                            {
+                                <i class="fa fa-angle-double-up" style="font-size: 36px; color: green"></i>
+                            }
+                            else
+                            { <i class="fa fa-angle-double-down" style="font-size: 36px; color: red"></i>
+                            }
+                           
+                        </td>
+                        <td>
+                            @*<p>4 months ago</p>*@
+                            <p style="color:rgb(72 71 71 / 0.90)">@item.last_Scene_Date</p>
+                        </td>
+
+                    </tr>
+                   
+                }
+                </tbody>
+        </table>
+    </div>
+   
+</div>

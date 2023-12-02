@@ -1,0 +1,66 @@
+﻿@model Assessment.Model.AssessmentDashboardModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col" style="background-color: rgb(255 255 255 / 0.53); width: 100%; margin-left: auto; margin-right: auto; padding: 20px; border-radius: 16px; margin-top: -30px;">
+    <div class="row">
+        <div class="col-3 col-s-3 ">
+        </div>
+        <div class="col-6 col-s-9">
+
+            <h2 class="text">@Model.name</h2>
+            <img src="~/Images/rank1.gif" class="img-circle" />
+            <h2 class="Points">@Model.Rank</h2>
+
+        </div>
+    </div>
+
+    <div class="pricing">
+      
+        <div class="pricing-plan">
+
+            <img src="~/Images/animation_500_krlolmsp.gif" class="img-rounded" style=" margin: 0% 0% 0% 33%; width: 34%;" />
+            <p class="head" style="text-align: center; font-weight: bold;">Assessment Points</p>
+            <hr />
+            <h2 class="text1">@Model.Assessment_Point</h2>
+        </div>
+
+        <div class="pricing-plan">
+            <img src="~/Images/animation_500_krlolmsp.gif" class="img-rounded" style=" margin: 0% 0% 0% 33%; width: 34%;" />
+            <p class="head" style="text-align: center; font-weight: bold">Game Points</p>
+            <hr />
+            <h2 class="text1">@Model.Game_Point</h2>
+        </div>
+
+        <div class="pricing-plan">
+            <img src="~/Images/animation_500_krlolmsp.gif" class="img-rounded" style=" margin: 0% 0% 0% 33%; width: 34%;" />
+            <p class="head" style="text-align: center; font-weight: bold">Overall Points</p>
+            <hr />
+            <h2 class="text1">@Model.Overall_Point</h2>
+        </div>
+    </div>
+
+
+    @*<div class="container1">
+            <div class="column" style="background-color:white;padding-top:10%;">
+                <p class="head" style="text-align:center;font-weight:bold">Assessment Points</p>
+                <h2 class="text1">@Model.Assessment_Point</h2>
+            </div>
+
+            <span class="vertical-line"></span>
+            <div class="column" style="background-color: white; padding-top: 10%;">
+                <p class="head" style="text-align: center; font-weight: bold">Game Points</p>
+                <h2 class="text1">0</h2>
+            </div>
+
+            <span class="vertical-line"></span>
+            <div class="column" style="background-color: white; padding-top: 10%;">
+                <p class="head" style="text-align: center; font-weight: bold">Overall Points</p>
+                <h2 class="text1">@Model.Overall_Point</h2>
+            </div>
+        </div>*@
+
+</div>
+
+
